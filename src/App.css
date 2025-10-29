@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #1e1e1e; /* dark background */
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* App Container */
+.app-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Feedback Form Card */
+.feedback-form {
+  background: #2c2c2c; /* dark card background */
+  border-radius: 20px;
+  padding: 50px 40px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feedback-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #9b59b6, #8e44ad); /* purple gradient accent */
+  border-radius: 20px 0 0 20px;
+}
+.feedback-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+}
+.feedback-form h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #9b59b6; /* purple heading */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Form Fields */
+.feedback-form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #555;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  outline: none;
+  background: #1f1f1f;
+  color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #9b59b6;
+  box-shadow: 0 0 12px rgba(155, 89, 182, 0.5);
+}
+
+/* Submit Button */
+.feedback-form button {
+  background: #9b59b6; /* purple button */
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+.feedback-form button:hover {
+  background: #8e44ad;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(155, 89, 182, 0.6);
+}
+
+/* Feedback message */
+.message {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #e74c3c; /* error red */
+  text-align: center;
+}
+
+/* Dashboard */
+.dashboard {
+  background: #2c2c2c; /* dark card */
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 100%;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+.dashboard h2 {
+  margin-bottom: 25px;
+  color: #9b59b6;
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Dashboard Table */
+.dashboard table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+.dashboard th {
+  text-align: left;
+  padding: 14px 16px;
+  background: #8e44ad; /* purple header */
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+}
+.dashboard td {
+  padding: 14px 16px;
+  background: #1f1f1f;
+  color: #f0f0f0;
+  border-radius: 8px;
+}
+.dashboard tr {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.dashboard tr:hover td {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #e74c3c; /* red delete */
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.delete-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .feedback-form, .dashboard {
+    padding: 30px 20px;
+  }
+  .dashboard th, .dashboard td {
+    padding: 10px 12px;
+  }
+}
